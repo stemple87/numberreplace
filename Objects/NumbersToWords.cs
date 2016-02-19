@@ -16,7 +16,7 @@ namespace NumbersToWordsNS.Objects
     public string DictionaryMethod()
     {
       string outputString = "";
-      Dictionary<int, string> dictionaryTo10 = new Dictionary<int, string>()
+      Dictionary<int, string> dictionaryTo20 = new Dictionary<int, string>()
       {
         {1, "one"},
         {2, "two"},
@@ -27,12 +27,22 @@ namespace NumbersToWordsNS.Objects
         {7, "seven"},
         {8, "eight"},
         {9, "nine"},
-        {10, "ten"}
+        {10, "ten"},
+        {11, "eleven"},
+        {12, "twelve"},
+        {13, "thirteen"},
+        {14, "fourteen"},
+        {15, "fifteen"},
+        {16, "sixteen"},
+        {17, "seventeen"},
+        {18, "eighteen"},
+        {19, "nineteen"},
+        {20, "twenty"}
       };
       // Console.WriteLine(dictionaryTo10.ContainsKey(_input));
-      if(dictionaryTo10.ContainsKey(_input))
+      if(dictionaryTo20.ContainsKey(_input))
       {
-        foreach(KeyValuePair<int, string> entry in dictionaryTo10)
+        foreach(KeyValuePair<int, string> entry in dictionaryTo20)
         {
           if (_input == entry.Key)
           {
@@ -45,7 +55,7 @@ namespace NumbersToWordsNS.Objects
 
       else
       {
-        return "nothin. That's not beetween one and ten!";
+        return "nothin. That's not beetween one and twenty!";
       }
     }
     // public string GetResults()
