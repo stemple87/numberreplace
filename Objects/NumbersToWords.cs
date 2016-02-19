@@ -45,7 +45,7 @@ namespace NumbersToWordsNS.Objects
 
       else
       {
-        return "nothin";
+        return "nothin. That's not beetween one and ten!";
       }
     }
     // public string GetResults()

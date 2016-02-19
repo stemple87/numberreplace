@@ -7,20 +7,20 @@ namespace NumbersToWordsNS
 {
   public class HomeModule : NancyModule
   {
-    // public HomeModule()
-    // {
-    //   Get["/"] = _ =>
-    //   {
-    //     string results = "";
-    //     return View["index.cshtml", results];
-    //   };
-    //
-    //   Post["/"] = _ =>
-    //   {
-    //     ScrabbleScore newScrabbleScore = new ScrabbleScore(Request.Form["word"]);
-    //     string results = newScrabbleScore.GetResults();
-    //     return View["index.cshtml", results];
-    //   };
-    // }
+    public HomeModule()
+    {
+      Get["/"] = _ =>
+      {
+        string results = "";
+        return View["index.cshtml", results];
+      };
+
+      Post["/"] = _ =>
+      {
+        NumbersToWords newNumbersToWords = new NumbersToWords(Request.Form["number"]);
+        string results = newNumbersToWords.DictionaryMethod();
+        return View["index.cshtml", results];
+      };
+    }
   }
 }

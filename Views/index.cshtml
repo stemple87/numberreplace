@@ -1,0 +1,9 @@
+<form action="/" method="post">
+  <label for="number">Enter a number from 1 to 10: </label>
+  <input type="text" name="number">
+  <button type="submit" name="button">Click for number to word</button>
+</form>
+@if (@Model != "")
+{
+  <p>number converted to word is: @Model</p>
+}
